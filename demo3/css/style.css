@@ -253,7 +253,7 @@ nav.affix-top {
 /*-------- header css --------------*/
 
 header {
-    background:url("../img/bg_slilder-1.jpg") ;
+    background:url("../img/tausta.jpg") ;
     background-attachment:fixed;
     background-size:cover;
     height: 670px;
