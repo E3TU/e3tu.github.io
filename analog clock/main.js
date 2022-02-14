@@ -1,6 +1,7 @@
 const hoursEl = document.getElementById("hour");
 const minutesEl = document.getElementById("minute");
 const secondsEl = document.getElementById("second");
+const theme = document.getElementById("theme");
 const timeformat = document.getElementById("timeformat");
 const dateEl = document.getElementById("date");
 const timeEl = document.getElementById("time");
@@ -20,9 +21,16 @@ setInterval(() => {
     const seconds = time.getSeconds();
     const all = hour + ":" + minutes;
     const all2 = days[day] + " " + date + " " + months[month];
-
+    const minutesUnder10 = hour + ":" + 0 + minutes;
+    
     dateEl.innerText = all2;
     timeEl.innerText = all;
+
+    test = hour + ":" + minutes;
+
+    if (minutes < 10){
+        timeEl.innerText = minutesUnder10;
+    }
 
     hoursEl.style.transform = `translate(-50%, -100%) rotate(${hour * 30}deg)`
 
@@ -31,6 +39,22 @@ setInterval(() => {
     secondsEl.style.transform = `translate(-50%, -100%) rotate(${seconds * 6}deg)`
 }, 1000)
 
-function format() {
-    console.log("test");
-}
+theme.addEventListener("click", () => {
+    const html = document.querySelector("html");
+    if(html.classList.contains("light")) {
+        html.classList.remove("light");
+        document.body.style.backgroundColor = "#191919";
+        theme.innerHTML = "Light mode";
+    } else{
+        html.classList.add("dark");
+        theme.innerHTML = "Dark mode";
+    }
+    if(html.classList.contains("dark")) {
+        html.classList.remove("dark");
+        html.classList.add("light")
+        document.body.style.backgroundColor = "white";
+        document.getElementById("date").style.color = "black";
+        theme.innerHTML = "Dark mode";
+    }
+})
+
