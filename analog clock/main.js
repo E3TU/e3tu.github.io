@@ -6,10 +6,13 @@ const timeformat = document.getElementById("timeformat");
 const dateEl = document.getElementById("date");
 const timeEl = document.getElementById("time");
 
+//Tehdään array viikonpäiville
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
+//Array kuukausille
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
+//Setinterval päivittää kellon sekuntin välein jotta sekuntti viisari liikkuu
 setInterval(() => {
     const time = new Date();
     const day = time.getDay();
@@ -27,10 +30,11 @@ setInterval(() => {
 
     test = hour + ":" + minutes;
 
+    //Jos minuutit on alle kymmenen lisäämme nolla minuutin eteen
     if (minutes < 10){
         timeEl.innerText = minutesUnder10;
     }
-
+    
     hoursEl.style.transform = `translate(-50%, -100%) rotate(${hour * 30}deg)`
 
     minutesEl.style.transform = `translate(-50%, -100%) rotate(${minutes * 6}deg)`
@@ -38,6 +42,7 @@ setInterval(() => {
     secondsEl.style.transform = `translate(-50%, -100%) rotate(${seconds * 6}deg)`
 }, 1000)
 
+//Muutetaan dark teeman ja light teema välillä napin painaessa
 theme.addEventListener("click", () => {
     const html = document.querySelector("html");
     if(html.classList.contains("light")) {
