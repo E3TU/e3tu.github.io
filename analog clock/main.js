@@ -44,6 +44,8 @@ theme.addEventListener("click", () => {
     if(html.classList.contains("light")) {
         html.classList.remove("light");
         document.body.style.backgroundColor = "#191919";
+        document.getElementById("date").style.color = "white";
+        document.getElementById("clock").style.borderColor = "white";
         theme.innerHTML = "Light mode";
     } else{
         html.classList.add("dark");
@@ -53,6 +55,7 @@ theme.addEventListener("click", () => {
         html.classList.remove("dark");
         html.classList.add("light")
         document.body.style.backgroundColor = "white";
+        document.getElementById("clock").style.borderColor = "black";
         document.getElementById("date").style.color = "black";
         theme.innerHTML = "Dark mode";
     }
