@@ -12,7 +12,6 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", 
 
 setInterval(() => {
     const time = new Date();
-    const year = time.getFullYear();
     const day = time.getDay();
     const date = time.getDate();
     const month = time.getMonth();
