@@ -1,0 +1,221 @@
+* {
+    padding: 0px;
+    margin: 0px
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #191919;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    max-height: 100%;
+}
+.topbar ul{
+    position: relative;
+    margin-top: 0px;
+    list-style-type: none;
+    float: right;
+    display: flex;
+    margin-right: 0.52vw;
+    z-index: 1000;
+}
+.topbar li{
+    padding-top: 15px;
+    display: inline-block; 
+    margin-top: 15px;
+}
+.topbar a{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.56rem;
+    padding: 15px;
+    transition: 0.5s;
+}
+.topbar a:hover{
+    background-color: #19bb4a;
+}
+.topbar{
+    height: 90px;
+    width: 100%;
+    background-color: #191919;
+    position: fixed;
+    z-index: 1000;
+}
+.scroll{
+    transition: 1.5s;
+    background-color: rgba(25, 25, 25, 0.6);
+}
+.colored{
+    background-color: #19bb4a;
+    padding: 15px;
+}
+.logo{
+    position: relative;
+    color: #fff;
+    top: 25%;
+    font-size: 2.18rem;
+    left: 5%;
+}
+#background1{
+    background: url(/images/coding.png);
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+}
+.backgroundtext{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 12px;
+    width: 66%;
+    left: 10%;
+    top: 35%;
+    color: #fff;
+    font-size: 35px;
+}
+.word{
+    color: #19bb4a;
+    animation: blink 0.7s linear infinite;
+}
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+#github{
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    padding: 15px 25px 15px 25px;
+    font-size: 25px;
+    background-color: #19bb4a;
+    border: none;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    border-radius: 15px;
+}
+#github:hover{
+    opacity: 0.8;
+}
+#discord{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    padding: 15px 25px 15px 25px;
+    font-size: 25px;
+    background-color: #19bb4a;
+    border: none;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    border-radius: 15px;
+}
+#discord:hover{
+    opacity: 0.8;
+}
+.aboutme{
+    position: relative;
+    height: 1000px;
+    width: 100%;
+}
+.header{
+    position: relative;
+    color: #fff;
+    font-size: 4rem;
+    top: 2%;
+    text-align: center;
+}
+.textcontainer{
+    position: relative;
+    left: 55%;
+    top: 12%;
+    width: 45vh;
+    height: 30vh;
+}
+.text{
+    position: relative;
+    color: #fff;
+    padding-top: 0.92vh;
+    padding-left: 0.92vh;
+    font-size: 35px;
+}
+.line{
+    border: 1px solid #19bb4a;
+    margin-top: 25px;
+}
+.images{
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    left: 15%;
+}
+.html{
+    width: 13vh;
+    height: 13vh;
+}
+.css{
+    width: 13vh;
+    height: 13vh;
+}
+.js{
+    width: 13vh;
+    height: 13vh;
+}
+.cs{
+    width: 13vh;
+    height: 13vh;
+}
+.linux{
+    width: 13vh;
+    height: 13vh;
+}
+.projects{
+    position: relative;
+    height: 1000px;
+    width: 100%;
+}
+.header2{
+    position: relative;
+    color: #fff;
+    font-size: 4rem;
+    top: 2%;
+    text-align: center;
+    padding-left: 20px;
+}
+.line2{
+    border: 1px solid #19bb4a;
+    margin-top: 25px;
+}
+.header3{
+    position: relative;
+    color: #fff;
+    font-size: 4rem;
+    top: 5%;
+    text-align: center;
+    padding-left: 20px;
+}
+.line3{
+    border: 1px solid #19bb4a;
+    margin-top: 25px;
+}
+.contact{
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+ ::-webkit-scrollbar{
+     width: 7px;
+}
+::-webkit-scrollbar-track{
+    background: #000;
+}
+::-webkit-scrollbar-thumb{
+    background: #373737;
+    width: 100%;
+    border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #19bb4a;
+}
